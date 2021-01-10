@@ -4,18 +4,15 @@
         <a class="navbar-brand" href="/">Microposts</a>
         
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
-            <span class="navbar-togller-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav>
+            <ul class="navbar-nav">
                 @if(Auth::check())
-                    {{-- ユーザーページへのリンク --}}
+                    {{-- ユーザー一覧ページへのリンク --}}
                     <li class="nav-item">{!! link_to_route('users.index','Users',[],['class'=>'nav-link']) !!}</li>
-                    <li class="nav-item dropdown">
-                    {{-- ユーザー登録ページへのリンク --}}
-                    <li class="nav-item"><a href="#" class="nav-link">Users</a></li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
